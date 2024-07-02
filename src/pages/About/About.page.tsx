@@ -2,21 +2,17 @@ import React, { useContext } from "react";
 
 import "./About.page.scss";
 
-import { AppContext } from "../contexts/AppContext";
+import { AppContext } from "../../contexts/AppContext";
 
 const About: React.FC = () => {
-  const { darkTheme, setDarkTheme } = useContext(AppContext);
-
-  const handleThemeChange = () => {
-    setDarkTheme((prev) => !prev);
-  };
+  const { darkTheme } = useContext(AppContext);
 
   return (
     <main
       className="main"
       style={{ backgroundColor: darkTheme ? "black" : "#fff" }}
     >
-      <button onClick={handleThemeChange}>Change theme</button>
+      <h1>About Page</h1>
     </main>
   );
 };

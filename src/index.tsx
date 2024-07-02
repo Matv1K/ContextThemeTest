@@ -5,7 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import About from "./pages/About.page";
+import { Header } from "./components";
+
+import About from "./pages/About/About.page";
+import Contact from "./pages/Contact/Contact.page";
 
 import { AppProvider } from "./contexts/AppContext";
 
@@ -15,9 +18,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <AppProvider>
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   </AppProvider>
