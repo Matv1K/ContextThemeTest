@@ -1,0 +1,18 @@
+.header {
+  padding: 20px;
+  border-bottom: 1px solid red;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+
+  &__item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
